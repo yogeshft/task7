@@ -13,11 +13,38 @@
   --btn-hover: #1b402e;
 }
 
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montsrrat/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(../fonts/Montsrrat/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../fonts/Montsrrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Fraunces-Regular;
+  src: url(../fonts/Fraunces/Fraunces_9pt-Bold.ttf);
+}
+@font-face {
+  font-family: Fraunces-Medium;
+  src: url(../fonts/Fraunces/Fraunces_72pt-Bold.ttf);
+}
+@font-face {
+  font-family: Fraunces-Bold;
+  src: url(../fonts/Fraunces/Fraunces_144pt-Bold.ttf);
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Regular", sans-serif;
   background: #f3eae3;
   height: 100vh;
 }
+
 /* container */
 .container {
   position: absolute;
@@ -49,21 +76,22 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
 /* title */
-.container__details .container__details__title {
+.container__details__title {
   letter-spacing: 4.8px;
   margin-top: 45px;
   color: var(--title-des);
   font-weight: 400;
 }
 
-.container__details__heading {
+.container__details__heading h1 {
   margin-top: 27px;
   text-transform: capitalize;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces-Regular", serif;
   font-weight: 700;
-  width: 343px;
-  flex-shrink: 0;
+  /* max-width: 343px; */
+  width: 200px;
   font-size: 32px;
 }
 
@@ -109,6 +137,7 @@ body {
   align-items: center;
   gap: 30px;
 }
+
 .container__details__btn:hover {
   background-color: var(--btn-hover);
 }
@@ -120,6 +149,7 @@ body {
     max-height: 800px;
     background-color: #f5f5f5;
   }
+
   .container__banner-img {
     background: url(../assets/images/mobile.jpeg) no-repeat;
     max-width: 100%;
@@ -128,23 +158,30 @@ body {
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
+
   .container__details {
     max-width: 100%;
     padding-left: 15px;
     border: 0px 0px 20px 20px;
     margin-top: -10px;
     z-index: -1;
-    max-height: 409px;
   }
+
   .container__details__title {
     font-size: 12px;
     letter-spacing: 3.6px;
     font-weight: 400;
   }
+
   .container__details__heading {
     max-width: 290px;
     margin-top: 6px;
+    white-space: normal;
   }
+  .container__details__heading h1 {
+    width: 100%;
+  }
+
   .container__details__description {
     max-width: 290px;
     font-size: 16px;
